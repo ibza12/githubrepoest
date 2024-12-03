@@ -16,7 +16,7 @@ namespace ADSPortEx1
 
     //Don't forget to properly commit and document your work! 
     // Commit fairly frequently with proper descriptions, i.e. commit after implementing the enqueue function...
-    
+
     //Lastly, don't forget about implementing your UI in 'Form1.cs' too!
     // See lab material from week 1 to aid with this...
 
@@ -25,45 +25,58 @@ namespace ADSPortEx1
     class GuestQueue
     {
 
+        private int maxsize = 10;
+        private Guest[] store;
+        private int head = 0;
+        private int tail = 0;
+        private int numItems = 0;
+
         // Functions for EX.1A
         public GuestQueue()
         {
-            throw new NotImplementedException();
+            store = new Guest[maxsize];
         }
 
         public GuestQueue(int size)
         {
-            throw new NotImplementedException();
+            maxsize = size;
+            store = new Guest[maxsize];
         }
 
         public void Enqueue(Guest value)
         {
-            throw new NotImplementedException();
+            store[tail] = value;
+            tail++;
+            numItems++;
         }
 
         public Guest Dequeue()
         {
-            throw new NotImplementedException();
+            Guest headItem = store[head];
+            head++;
+            numItems--;
+            return headItem;
         }
 
         public Guest Peek()
         {
-            throw new NotImplementedException();
+            return store[head];
         }
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return numItems;
         }
 
         public bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return (numItems == 0);
         }
 
         public bool IsFull()
         {
-            throw new NotImplementedException();
+            return numItems = maxsize;
+
         }
 
         // Functions for EX.1B
