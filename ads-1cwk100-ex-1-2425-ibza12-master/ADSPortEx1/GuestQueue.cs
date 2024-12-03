@@ -91,7 +91,7 @@ namespace ADSPortEx1
             throw new NotImplementedException();
         }
 
-        // See tasksheet for details for EX.1C
+        // See tasksheet for details for EX.1C nice
 
 
 
