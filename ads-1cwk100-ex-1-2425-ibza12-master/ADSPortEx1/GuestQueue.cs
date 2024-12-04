@@ -60,6 +60,10 @@ namespace ADSPortEx1
 
         public Guest Peek()
         {
+            if (IsEmpty())
+            {
+                return null;
+            }
             return store[head];
         }
 
