@@ -85,10 +85,28 @@ namespace ADSPortEx1
 
         // Functions for EX.1B
 
-        public void Reverse(int k)
-        {
-            throw new NotImplementedException();
-        }
+       public void Reverse(int k)
+{
+    if (k > numItems || k <= 0)
+    {
+        return; // Do nothing if k is invalid.
+    }
+
+    int start = head;
+    int end = (head + k - 1) % maxsize;
+
+    while (start != end && start != (end + 1) % maxsize)
+    {
+        // Swap the guests
+        Guest temp = store[start];
+        store[start] = store[end];
+        store[end] = temp;
+
+        // Move pointers
+        start = (start + 1) % maxsize;
+        end = (end - 1 + maxsize) % maxsize;
+    }
+}
 
         public Guest GetMostFunds()
         {
