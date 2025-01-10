@@ -108,10 +108,28 @@ namespace ADSPortEx1
     }
 }
 
-        public Guest GetMostFunds()
+       public Guest GetMostFunds()
+{
+    if (IsEmpty())
+    {
+        return null; // Return null if the queue is empty.
+    }
+
+    Guest richestGuest = store[head];
+    int index = head;
+
+    for (int i = 1; i < numItems; i++)
+    {
+        index = (index + 1) % maxsize;
+        if (store[index].Funds > richestGuest.Funds)
         {
-            throw new NotImplementedException();
+            richestGuest = store[index];
         }
+    }
+
+    return richestGuest;
+}
+
 
         // See tasksheet for details for EX.1C nice
 
