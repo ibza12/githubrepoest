@@ -104,7 +104,7 @@ namespace ADSPortEx1
 
         // Move pointers
         start = (start + 1) % maxsize;
-        end = (end - 1 + maxsize) % maxsize;
+        end = (end - 1 + maxsize) % maxsize;  // adding my notes
     }
 }
 
