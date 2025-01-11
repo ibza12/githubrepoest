@@ -33,7 +33,7 @@ namespace ADSPortEx1
 
         // Functions for EX.1A
         public GuestQueue()
-        {
+        { 
             store = new Guest[maxsize];
         }
 
