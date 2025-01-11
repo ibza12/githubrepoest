@@ -24,7 +24,7 @@ namespace ADSPortEx1
         public Guest(string name, double funds)
         {
             this.name = name;
-            this.funds = funds;
+            this.funds = funds; 
         }
 
         public string Name
