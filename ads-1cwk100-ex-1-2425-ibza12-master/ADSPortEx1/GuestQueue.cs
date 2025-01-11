@@ -127,7 +127,7 @@ namespace ADSPortEx1
         }
     }
 
-    return richestGuest;
+    return richestGuest;    // notes
 }
 
 
