@@ -79,7 +79,7 @@ namespace ADSPortEx1
 
         public bool IsFull()
         {
-            return numItems = maxsize;
+            return numItems = maxsize;  // github push not working proerly so i have to rewrite my push notes again.
 
         }
 
